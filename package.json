@@ -1,5 +1,5 @@
 {
-  "name": "nb-crdt",
+  "name": "@notebox/nb-crdt",
   "version": "4.0.0",
   "author": "KANG Myung-hun",
   "repository": {
