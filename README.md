@@ -1,5 +1,6 @@
 # nb-crdt
 
+[![codecov](https://codecov.io/gh/notebox/nb-crdt/graph/badge.svg?token=65QQDKPEPV)](https://codecov.io/gh/notebox/nb-crdt)
 [![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/notebox)
 
 A block based Conflict-free Replicated Data Type that enables collaborative editing across multiple participants allowing for flexible data sharing across spreadsheets, boards, rich text, and more.

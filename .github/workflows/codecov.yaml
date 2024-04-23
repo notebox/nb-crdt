@@ -1,0 +1,44 @@
+name: codecov
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Cache
+      id: npm-cache
+      uses: actions/cache@v4
+      with:
+        path: ./node_modules
+        key: ${{ runner.os }}-npm-cache-${{ hashFiles('package-lock.json') }}
+
+    - name: Install
+      if: steps.npm-cache.outputs.cache-hit != 'true'
+      run: npm ci
+    
+    - name: Lint
+      run: npm run lint
+
+    - name: Test
+      run: npm test -- --coverage
+
+    - name: Codecov
+      uses: codecov/codecov-action@v4
+      with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: notebox/nb-crdt
