@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "outDir": "./dist",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "target": "es6"
+  },
+  "include": [
+    "./src/**/*.ts"
+  ]
+}

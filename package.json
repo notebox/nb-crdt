@@ -1,0 +1,50 @@
+{
+  "name": "nb-crdt",
+  "version": "4.0.0",
+  "author": "KANG Myung-hun",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notebox/nb-crdt.git"
+  },
+  "license": "AGPL-3.0-or-later",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npx tsc && tsc-alias",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "test": "jest",
+    "test-cover": "jest --coverage",
+    "test-watch": "jest --watchAll=true",
+    "test-watch-cover": "jest --coverage --watchAll=true",
+    "prepare": "npm run build",
+    "pretest": "npm run build",
+    "posttest": "npm run lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "npm run lint-fix"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-typescript": "^7.23.2",
+    "@types/jest": "^29.5.8",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "babel-jest": "^29.7.0",
+    "eslint": "^8.53.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "husky": "^4.3.8",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.0.2",
+    "tsc-alias": "^1.8.8",
+    "typescript": "^5.2.2"
+  }
+}
