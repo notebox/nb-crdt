@@ -2,10 +2,15 @@
   "name": "@notebox/nb-crdt",
   "version": "4.0.0",
   "author": "KANG Myung-hun",
+  "description": "block based CRDT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/notebox/nb-crdt.git"
   },
+  "keywords": [
+    "crdt",
+    "editor"
+  ],
   "license": "AGPL-3.0-or-later",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
